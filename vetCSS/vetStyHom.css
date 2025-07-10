@@ -13,9 +13,12 @@ body {
 }
 
 .carousel {
-    width: 100vw;
-    height: 450px;
+    width: 100%;
+    height: 65vh; 
+    max-height: 600px; 
+    min-height: 400px; 
     position: relative;
+    overflow: hidden;
 }
 
 .carousel > ul{
@@ -36,9 +39,22 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center center;
     background-color: #273F4F;
+}
+
+/*Ajuste de imagenes en el carrusel para utilizar cover*/
+.slide:nth-child(1) > img { 
+    object-position: center 30%; 
+}
+
+.slide:nth-child(2) > img { 
+    object-position: center 25%;
+}
+
+.slide:nth-child(3) > img { 
+    object-position: center 35%;
 }
 
 .slide[data-active] {
@@ -78,4 +94,40 @@ body {
 
 .carousel-button.next {
     right: 1rem;
+}
+
+section .productosTendencia{
+    background-color: white !important; 
+    padding: 2rem 0;
+}
+
+h1 {
+    color: #447D9B;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/*Productos*/
+
+#productosTendencia {
+    background-color: white !important;
+}
+
+#productosTendencia .album {
+    background-color: white !important;
+}
+
+#productosTendencia .card {
+    background-color: white !important;
+}
+
+#productosTendencia h1 {
+    color: #447D9B !important;
+    margin-bottom: 2rem;
+    padding: 30px;
+}
+
+.bg-body-tertiary {
+    background-color: white !important;
 }
