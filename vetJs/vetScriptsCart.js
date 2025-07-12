@@ -1,3 +1,4 @@
+// Detector para el eventos DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function() {
     eventListeners();
 });
