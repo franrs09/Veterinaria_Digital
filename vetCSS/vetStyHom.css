@@ -1,3 +1,4 @@
+/* Colores y fuentes */
 .bs-primary-bg-subtle {
     background-color: #447D9B;
     color: white;
@@ -7,31 +8,53 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
     overflow-y: auto;
 }
 
+/* Layout con Grid para mantener footer abajo */
+.site {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* main ocupa espacio intermedio */
+main {
+    padding: 1rem;
+}
+
+/* Carousel */
 .carousel {
     width: 100%;
-    height: 65vh; 
-    max-height: 600px; 
-    min-height: 400px; 
+    height: 65vh;
+    max-height: 600px;
+    min-height: 400px;
     position: relative;
     overflow: hidden;
 }
 
-.carousel > ul{
+.carousel > ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    position: relative;
+    height: 100%;
 }
 
 .slide {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: 200ms opacity ease-in-out;
+    transition: opacity 200ms ease-in-out;
     transition-delay: 200ms;
 }
 
@@ -44,25 +67,13 @@ body {
     background-color: #273F4F;
 }
 
-/*Ajuste de imagenes en el carrusel para utilizar cover*/
-.slide:nth-child(1) > img { 
-    object-position: center 30%; 
-}
-
-.slide:nth-child(2) > img { 
-    object-position: center 25%;
-}
-
-.slide:nth-child(3) > img { 
-    object-position: center 35%;
-}
-
 .slide[data-active] {
     opacity: 1;
     z-index: 1;
     transition-delay: 0ms;
 }
 
+/* Botones del carrusel */
 .carousel-button {
     position: absolute;
     z-index: 2;
@@ -71,17 +82,17 @@ body {
     font-size: 4rem;
     top: 50%;
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
     color: white;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .carousel-button:focus {
@@ -96,19 +107,7 @@ body {
     right: 1rem;
 }
 
-section .productosTendencia{
-    background-color: white !important; 
-    padding: 2rem 0;
-}
-
-h1 {
-    color: #447D9B;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-/*Productos*/
+/* Productos en tendencia */
 
 #productosTendencia {
     background-color: white !important;
@@ -116,10 +115,17 @@ h1 {
 
 #productosTendencia .album {
     background-color: white !important;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 #productosTendencia .card {
     background-color: white !important;
+    flex: 1 1 calc(33% - 1rem);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
 }
 
 #productosTendencia h1 {
@@ -128,14 +134,12 @@ h1 {
     padding: 30px;
 }
 
-.bg-body-tertiary {
-    background-color: white !important;
+/* Footer */
+
+footer {
+    background-color: #447D9B;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-/* Footer siempre abajo*/
-.site{
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(0, 1fr);
-}
