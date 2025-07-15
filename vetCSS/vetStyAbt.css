@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow-y: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+.bs-primary-bg-subtle {
+    background-color: #447D9B;
+    color: white;
+}
