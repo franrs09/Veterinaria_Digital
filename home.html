@@ -15,6 +15,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="vetCSS/vetStyHom.css" />
     <link rel="stylesheet" href="vetCSS/vetStyGlobal.css">
+    <link rel="stylesheet" href="vetCSS/vetStyFooter.css">
+    <link rel="stylesheet" href="vetCSS/vetStyHeader.css">
     <script src="vetJS/vetScriptsHome.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -22,7 +24,7 @@
 <body>
     <div class="site">
         <header>
-            <section class="bg-dark text-white text-center p-1">
+            <section class="main-header text-center p-1">
                 <div class="container">
                     <p class="d-flex justify-content-between align-items-center mb-0">
                         <span>N&uacute;mero de emergencia</span>
@@ -30,7 +32,7 @@
                     </p>
                 </div>
             </section>
-            <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+            <nav class="navbar navbar-expand-lg main-navbar">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="home.html">HospiPet</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -62,7 +64,7 @@
                         </ul>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="login.html">
+                                <a class="nav-link" href="login.html">
                                     <i class="fa-solid fa-user"></i> Inicio de sesi&oacute;n
                                 </a>
                             </li>
@@ -100,7 +102,7 @@
             </section>
 
             <section id="productosTendencia">
-                <h1 class="text-center mb-4">Productos en tendencia</h1>
+                <h1 class="text-center mb-1 mt-4">Productos en tendencia</h1>
                 <div class="album py-5 bg-body-tertiary">
                     <div class="container">
                         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -234,5 +236,4 @@
         </footer>
     </div>
 </body>
-
 </html>
