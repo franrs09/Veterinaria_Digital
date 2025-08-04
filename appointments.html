@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <title>HospiPet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="vetCSS/vetStyGlobal.css">
+    <link rel="stylesheet" href="vetCSS/vetStyHeader.css">
+    <link rel="stylesheet" href="vetCSS/vetStyFooter.css">
+    <script src="vetJS/vetScriptsHome.js" defer></script>
+</head>
+
+<body>
+    <div class="site">
+        <header>
+            <section class="main-header text-center p-1">
+                <div class="container">
+                    <p class="d-flex justify-content-between align-items-center mb-0">
+                        <span>N&uacute;mero de emergencia</span>
+                        <span>+506 1234567</span>
+                    </p>
+                </div>
+            </section>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">HospiPet</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="home.html"><i
+                                        class="fa-solid fa-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html"><i class="fa-solid fa-users"></i> Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productos.html"><i class="fa-solid fa-store"></i>
+                                    Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>
+                                    Cita</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Inicio de
+                                    sesi&oacute;n</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                                    Carrito</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-5">
+            <section class="my-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Cuidado Integral para tu Mascota</h2>
+                        <p class="lead">En HospiPet ofrecemos atención veterinaria especializada con el mayor amor y
+                            profesionalismo.</p>
+
+                        <div class="d-grid gap-3 mt-4">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-paw text-primary me-3 fs-4"></i>
+                                <div>
+                                    <h5 class="mb-1">Servicios Completos</h5>
+                                    <p class="mb-0">Consulta general, vacunación, desparasitación, cirugías y más</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-clock text-primary me-3 fs-4"></i>
+                                <div>
+                                    <h5 class="mb-1">Atención 24/7</h5>
+                                    <p class="mb-0">Servicio de emergencias disponible las 24 horas</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-home text-primary me-3 fs-4"></i>
+                                <div>
+                                    <h5 class="mb-1">Ambiente Cálido</h5>
+                                    <p class="mb-0">Espacio diseñado para reducir el estrés de tus mascotas</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalCita">
+                                <i class="fas fa-calendar-check me-2"></i> Agendar Cita Ahora
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <img src="https://purina.co.cr/sites/default/files/2023-11/consulta-veterinaria-cachorro-cr.jpg"
+                            class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </section>
+
+            <section class="my-5 py-5 bg-light rounded-3">
+                <h2 class="text-center mb-5">Nuestros Servicios</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-syringe text-primary fs-1 mb-3"></i>
+                                <h4>Vacunación</h4>
+                                <p>Programa completo de vacunación para todas las edades y especies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-stethoscope text-primary fs-1 mb-3"></i>
+                                <h4>Consultas</h4>
+                                <p>Revisiones generales y diagnóstico especializado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-cut text-primary fs-1 mb-3"></i>
+                                <h4>Estética</h4>
+                                <p>Baño, corte de pelo y cuidado de uñas profesional</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <footer class="bs-primary-bg-subtle text-center p-3 mt-4">
+            <div class="container">
+                <p class="mb-0">©2025 HospiPet. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Modal de citas -->
+        <div class="modal fade" id="modalCita" tabindex="-1" aria-labelledby="modalCitaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form id="formCita">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title" id="modalCitaLabel">Agendar Cita Veterinaria</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold mb-3">Datos del Dueño</h6>
+                                    <div class="mb-3">
+                                        <label for="nombreDueno" class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" id="nombreDueno" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefono" class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" id="telefono" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold mb-3">Datos de la Mascota</h6>
+                                    <div class="mb-3">
+                                        <label for="nombreMascota" class="form-label">Nombre de la mascota</label>
+                                        <input type="text" class="form-control" id="nombreMascota" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tipoMascota" class="form-label">Tipo de mascota</label>
+                                        <select class="form-select" id="tipoMascota" required>
+                                            <option value="">Seleccione...</option>
+                                            <option>Perro</option>
+                                            <option>Gato</option>
+                                            <option>Ave</option>
+                                            <option>Otro</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="raza" class="form-label">Raza (opcional)</label>
+                                        <input type="text" class="form-control" id="raza">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="edad" class="form-label">Edad</label>
+                                        <input type="text" class="form-control" id="edad" placeholder="Ej: 3 años">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <h6 class="fw-bold mb-3">Detalles de la Cita</h6>
+                                    <div class="mb-3">
+                                        <label for="fechaCita" class="form-label">Fecha de la cita</label>
+                                        <input type="datetime-local" class="form-control" id="fechaCita" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="servicio" class="form-label">Servicio requerido</label>
+                                        <select class="form-select" id="servicio" required>
+                                            <option value="">Seleccione un servicio...</option>
+                                            <option>Consulta general</option>
+                                            <option>Vacunación</option>
+                                            <option>Desparasitación</option>
+                                            <option>Estética</option>
+                                            <option>Cirugía</option>
+                                            <option>Control</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="motivo" class="form-label">Motivo de la consulta</label>
+                                        <textarea class="form-control" id="motivo" rows="3" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="alergias" class="form-label">Alergias o condiciones
+                                            especiales</label>
+                                        <textarea class="form-control" id="alergias" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Agendar Cita</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

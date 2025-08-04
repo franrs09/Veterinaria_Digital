@@ -10,86 +10,146 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="vetCSS/vetStyHom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="vetCSS/vetStyAbt.css">
+    <link rel="stylesheet" href="vetCSS/vetStyGlobal.css">
+    <link rel="stylesheet" href="vetCSS/vetStyHeader.css">
+    <link rel="stylesheet" href="vetCSS/vetStyFooter.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <header>
-        <section class="bs-primary-bg-subtle text-center p-1">
-            <div class="container">
-                <p class="d-flex justify-content-between align-items-center mb-0">
-                    <span>N&uacute;mero de emergencia</span>
-                    <span>+506 1234567</span>
-                </p>
-            </div>
-        </section>
-        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="home.html">HospiPet</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="home.html"><i class="fa-solid fa-house"></i> Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="aboutus.html"><i class="fa-solid fa-users"></i> Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-store"></i> Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-calendar-check"></i> Cita</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"><i class="fa-solid fa-user me-2"></i> Inicio de sesi&oacute;n</a>
-                        </li>
-                    </ul>
+    <div class="site">
+        <header>
+            <section class="main-header text-center p-1">
+                <div class="container">
+                    <p class="d-flex justify-content-between align-items-center mb-0">
+                        <span>N&uacute;mero de emergencia</span>
+                        <span>+506 1234567</span>
+                    </p>
                 </div>
+            </section>
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.html">HospiPet</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="home.html"><i
+                                        class="fa-solid fa-house"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html"><i class="fa-solid fa-users"></i> Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productos.html"><i class="fa-solid fa-store"></i>
+                                    Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>
+                                    Cita</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Inicio de
+                                    sesi&oacute;n</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                                    Carrito</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-5">
+            <section class="my-5">
+                <h1 class="text-center mb-4">Sobre Nosotros</h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Cuidado Integral para tu Mascota</h2>
+                        <p class="lead">Bienvenido a HospiPet, su centro de confianza para el cuidado y bienestar de sus
+                            mascotas. Nuestro equipo
+                            está comprometido a proporcionar la mejor atención veterinaria y productos de calidad para
+                            asegurar la salud
+                            y felicidad de sus animales.</p>
+                        <p>
+                            En HospiPet, entendemos que cada mascota es única y merece un trato especial. Por eso,
+                            ofrecemos
+                            una amplia
+                            gama de servicios, desde consultas veterinarias hasta productos especializados, todo
+                            diseñado
+                            para satisfacer
+                            las necesidades individuales de su mascota.
+                        </p>
+                        <p>
+                            Nuestro personal está altamente capacitado y apasionado por el bienestar animal,
+                            garantizando
+                            que cada visita
+                            sea una experiencia positiva tanto para usted como para su mascota.
+                        </p>
+                        <p>
+                            Gracias por confiar en HospiPet. Estamos aquí para ayudarle a cuidar de su compañero peludo,
+                            emplumado o
+                            escamoso.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <img src="data:image/jpeg;base64,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"
+                            class="img-fluid rounded shadow">
+                    </div>
+            </section>
+
+            <section class="my-5 py-5 bg-light rounded-3">
+                <h2 class="text-center mb-5">Nuestros Servicios</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-syringe text-primary fs-1 mb-3"></i>
+                                <h4>Citas</h4>
+                                <p>Contamos con una programación de citas las 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-stethoscope text-primary fs-1 mb-3"></i>
+                                <h4>Emergencias</h4>
+                                <p>Contamos con personal disponible las 24 horas del día para atender a tu mascota</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-cut text-primary fs-1 mb-3"></i>
+                                <h4>Venta de productos</h4>
+                                <p>Contamos con lo mejor para tus mascotas.</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer class="bs-primary-bg-subtle text-center p-3 mt-4">
+            <div class="container">
+                <p class="mb-0">©2025 HospiPet. Todos los derechos reservados.</p>
             </div>
-        </nav>
-    </header>
-    <main class="container mt-4">
-        <img src="data:image/jpeg;base64,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"
-            alt="HospiPet Logo" width="500" class="img-fluid mb-4 d-block mx-auto">
-        <h1 class="text-center mb-4">Nosotros</h1>
-        <div class="mx-auto text-center" style="max-width: 700px;">
-            <p>
-                Bienvenido a HospiPet, su centro de confianza para el cuidado y bienestar de sus mascotas. Nuestro equipo
-                está comprometido a proporcionar la mejor atención veterinaria y productos de calidad para asegurar la salud
-                y felicidad de sus animales.
-            </p>
-            <p>
-                En HospiPet, entendemos que cada mascota es única y merece un trato especial. Por eso, ofrecemos una amplia
-                gama de servicios, desde consultas veterinarias hasta productos especializados, todo diseñado para
-                satisfacer
-                las necesidades individuales de su mascota.
-            </p>
-            <p>
-                Nuestro personal está altamente capacitado y apasionado por el bienestar animal, garantizando que cada
-                visita
-                sea una experiencia positiva tanto para usted como para su mascota.
-            </p>
-            <p>
-                Gracias por confiar en HospiPet. Estamos aquí para ayudarle a cuidar de su compañero peludo, emplumado o
-                escamoso.
-            </p>
-        </div>
-    </main>
-    <footer class="bs-primary-bg-subtle text-center p-3 mt-4">
-        <div class="container">
-            <p class="mb-0">©2025 HospiPet. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>

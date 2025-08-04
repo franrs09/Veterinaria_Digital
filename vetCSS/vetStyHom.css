@@ -1,26 +1,5 @@
-.bs-primary-bg-subtle {
-    background-color: #447D9B;
-    color: white;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    overflow-y: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
 }
 
 .carousel {
@@ -49,7 +28,7 @@ main {
     height: 100%;
     object-fit: contain;
     object-position: center;
-    background-color: #273F4F;
+    background-color: #B3DDF2;
 }
 
 .slide[data-active] {
@@ -89,4 +68,3 @@ main {
 
 .carousel-button.next {
     right: 1rem;
-}
