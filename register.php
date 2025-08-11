@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,55 +27,7 @@
 
 <body>
     <div class="site">
-        <header>
-            <section class="main-header text-center p-1">
-                <div class="container">
-                    <p class="d-flex justify-content-between align-items-center mb-0">
-                        <span>N&uacute;mero de emergencia</span>
-                        <span>+506 1234567</span>
-                    </p>
-                </div>
-            </section>
-            <nav class="navbar navbar-expand-lg main-navbar">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">HospiPet</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="home.html"><i
-                                        class="fa-solid fa-house"></i>
-                                    Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html"><i class="fa-solid fa-users"></i> Nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="productos.html"><i class="fa-solid fa-store"></i>
-                                    Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar-check"></i>
-                                    Cita</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Inicio de
-                                    sesi&oacute;n</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
-                                    Carrito</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <?php include 'navMenu.php'; ?>
         <main>
             <div class="min-vh-100 d-flex justify-content-center align-items-center">
                 <div class="card">
@@ -111,7 +67,7 @@
                         </form>
                     </div>
                     <div class="card-button">
-                        <p class="text-center">¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+                        <p class="text-center">¿Ya tienes cuenta? <a href="login.php">Iniciar sesión</a></p>
                     </div>
                 </div>
             </div>
