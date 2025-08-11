@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="vetCSS/vetStyGlobal.css">
     <link rel="stylesheet" href="vetCSS/vetStyHeader.css">
     <link rel="stylesheet" href="vetCSS/vetStyFooter.css">
-    <script src="vetJS/vetScriptsHome.js" defer></script>
+    <link rel="stylesheet" href="vetCSS/vetStyAppointments.css">
+    <script src="vetJs/vetScriptsAppointments.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -57,6 +59,10 @@
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="ver_citas.html"><i class="fa-solid fa-calendar-days"></i>
+                                    Ver Citas</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Inicio de
                                     sesi&oacute;n</a>
@@ -106,9 +112,12 @@
                         </div>
 
                         <div class="text-center mt-5">
-                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalCita">
+                            <button class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalCita">
                                 <i class="fas fa-calendar-check me-2"></i> Agendar Cita Ahora
                             </button>
+                            <a href="ver_citas.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-calendar-days me-2"></i> Consultar Citas
+                            </a>
                         </div>
                     </div>
 
@@ -164,93 +173,118 @@
         <div class="modal fade" id="modalCita" tabindex="-1" aria-labelledby="modalCitaLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
+                    <div class="modal-loading">
+                        <div class="loading-spinner"></div>
+                    </div>
                     <form id="formCita">
                         <div class="modal-header bg-primary text-white">
-                            <h5 class="modal-title" id="modalCitaLabel">Agendar Cita Veterinaria</h5>
+                            <h5 class="modal-title" id="modalCitaLabel">
+                                <i class="fas fa-calendar-plus me-2"></i>Agendar Cita Veterinaria
+                            </h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h6 class="fw-bold mb-3">Datos del Dueño</h6>
-                                    <div class="mb-3">
-                                        <label for="nombreDueno" class="form-label">Nombre completo</label>
-                                        <input type="text" class="form-control" id="nombreDueno" required>
+                                    <h6 class="fw-bold mb-3">
+                                        <i class="fas fa-user me-2"></i>Datos del Propietario
+                                    </h6>
+                                    <div class="field-group mb-3">
+                                        <label for="nombreDueno" class="form-label">Nombre completo *</label>
+                                        <input type="text" class="form-control" id="nombreDueno" required
+                                            placeholder="Ingrese su nombre completo">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="telefono" class="form-label">Teléfono</label>
-                                        <input type="tel" class="form-control" id="telefono" required>
+                                    <div class="field-group mb-3">
+                                        <label for="telefono" class="form-label">Teléfono *</label>
+                                        <input type="tel" class="form-control" id="telefono" required
+                                            placeholder="12345678" maxlength="8">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="field-group mb-3">
                                         <label for="email" class="form-label">Correo electrónico</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="correo@ejemplo.com">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <h6 class="fw-bold mb-3">Datos de la Mascota</h6>
-                                    <div class="mb-3">
-                                        <label for="nombreMascota" class="form-label">Nombre de la mascota</label>
-                                        <input type="text" class="form-control" id="nombreMascota" required>
+                                    <h6 class="fw-bold mb-3">
+                                        <i class="fas fa-paw me-2"></i>Datos de la Mascota
+                                    </h6>
+                                    <div class="field-group mb-3">
+                                        <label for="nombreMascota" class="form-label">Nombre de la mascota *</label>
+                                        <input type="text" class="form-control" id="nombreMascota" required
+                                            placeholder="Nombre de su mascota">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="tipoMascota" class="form-label">Tipo de mascota</label>
+                                    <div class="field-group mb-3">
+                                        <label for="tipoMascota" class="form-label">Tipo de mascota *</label>
                                         <select class="form-select" id="tipoMascota" required>
-                                            <option value="">Seleccione...</option>
-                                            <option>Perro</option>
-                                            <option>Gato</option>
-                                            <option>Ave</option>
-                                            <option>Otro</option>
+                                            <option value="">Seleccione el tipo...</option>
+                                            <option value="Perro">Perro</option>
+                                            <option value="Gato">Gato</option>
+                                            <option value="Ave">Ave</option>
+                                            <option value="Conejo">Conejo</option>
+                                            <option value="Hamster">Hámster</option>
+                                            <option value="Otro">Otro</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="raza" class="form-label">Raza (opcional)</label>
-                                        <input type="text" class="form-control" id="raza">
+                                    <div class="field-group mb-3">
+                                        <label for="raza" class="form-label">Raza</label>
+                                        <input type="text" class="form-control" id="raza"
+                                            placeholder="Ej: Labrador, Siamés...">
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="field-group mb-3">
                                         <label for="edad" class="form-label">Edad</label>
-                                        <input type="text" class="form-control" id="edad" placeholder="Ej: 3 años">
+                                        <input type="text" class="form-control" id="edad" 
+                                            placeholder="Ej: 3 años, 6 meses...">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-md-6">
-                                    <h6 class="fw-bold mb-3">Detalles de la Cita</h6>
-                                    <div class="mb-3">
-                                        <label for="fechaCita" class="form-label">Fecha de la cita</label>
+                                    <h6 class="fw-bold mb-3">
+                                        <i class="fas fa-calendar-alt me-2"></i>Detalles de la Cita
+                                    </h6>
+                                    <div class="field-group mb-3">
+                                        <label for="fechaCita" class="form-label">Fecha y hora *</label>
                                         <input type="datetime-local" class="form-control" id="fechaCita" required>
+                                        <div class="form-text">
+                                            <strong>Horarios disponibles:</strong><br>
+                                            • Mañana: 8:00 AM - 11:00 AM<br>
+                                            • Tarde: 2:00 PM - 5:00 PM<br>
+                                            <small class="text-muted">No atendemos domingos</small>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="servicio" class="form-label">Servicio requerido</label>
+                                    <div class="field-group mb-3">
+                                        <label for="servicio" class="form-label">Servicio requerido *</label>
                                         <select class="form-select" id="servicio" required>
                                             <option value="">Seleccione un servicio...</option>
-                                            <option>Consulta general</option>
-                                            <option>Vacunación</option>
-                                            <option>Desparasitación</option>
-                                            <option>Estética</option>
-                                            <option>Cirugía</option>
-                                            <option>Control</option>
+                                            <!-- Las opciones se llenan dinámicamente -->
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="motivo" class="form-label">Motivo de la consulta</label>
-                                        <textarea class="form-control" id="motivo" rows="3" required></textarea>
+                                    <div class="field-group mb-3">
+                                        <label for="motivo" class="form-label">Motivo de la consulta *</label>
+                                        <textarea class="form-control" id="motivo" rows="3" required
+                                            placeholder="Describa brevemente el motivo de la consulta..."></textarea>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="alergias" class="form-label">Alergias o condiciones
-                                            especiales</label>
-                                        <textarea class="form-control" id="alergias" rows="2"></textarea>
+                                    <div class="field-group mb-3">
+                                        <label for="alergias" class="form-label">Alergias o condiciones especiales</label>
+                                        <textarea class="form-control" id="alergias" rows="2"
+                                            placeholder="Mencione alergias, medicamentos actuales, condiciones especiales..."></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" class="btn btn-primary">Agendar Cita</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="fas fa-times me-2"></i>Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-check me-2"></i>Agendar Cita
+                            </button>
                         </div>
                     </form>
                 </div>

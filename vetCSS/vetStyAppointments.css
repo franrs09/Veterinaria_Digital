@@ -1,0 +1,201 @@
+
+.modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body h6 {
+    color: #F2B8A0;
+    border-bottom: 2px solid #F2B8A0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #F2B8A0;
+    box-shadow: 0 0 0 0.2rem rgba(242, 184, 160, 0.25);
+    outline: none;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Estilos para el calendario */
+input[type="datetime-local"] {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    background-color: #F2B8A0;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Botones del modal */
+.modal-footer .btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #F2B8A0;
+    border-color: #F2B8A0;
+}
+
+.btn-primary:hover {
+    background-color: #e6a082;
+    border-color: #e6a082;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    border-color: #545b62;
+    transform: translateY(-2px);
+}
+
+/* Animacion para campos con error */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.form-control.is-invalid {
+    animation: shake 0.5s;
+}
+
+/* Indicador de carga */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos mínimos de apoyo al módulo de Citas (Bootstrap-first) */
+
+/* Tarjeta de cita: leve acento lateral e interacción */
+.cita-card {
+    border-left: 4px solid #F2B8A0;
+    transition: box-shadow .2s ease, transform .2s ease;
+}
+.cita-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    transform: translateY(-2px);
+}
+
+/* Variantes por estado (solo borde izquierdo) */
+.estado-pendiente { border-left-color: #ffc107; }
+.estado-confirmada { border-left-color: #28a745; }
+.estado-completada { border-left-color: #0d6efd; }
+.estado-cancelada { border-left-color: #dc3545; }
+
+/* Caja informativa de mascota dentro de la card */
+.mascota-info {
+    background-color: #f8f9fa;
+    border-radius: .5rem;
+    padding: .5rem .75rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .modal-body h6 {
+        font-size: 14px;
+    }
+    
+    .form-control, .form-select {
+        padding: 10px 12px;
+    }
+}
+
+/* Validaciones visuales mejoradas */
+.field-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.field-group .form-control:valid {
+    border-color: #28a745;
+}
+
+.field-group .form-control:valid + .validation-icon::before {
+    content: "✓";
+    color: #28a745;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Loading overlay para el modal */
+.modal-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    border-radius: 10px;
+}
+
+.modal-loading.active {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #F2B8A0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
